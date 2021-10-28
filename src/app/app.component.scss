@@ -1,0 +1,43 @@
+@import '../global.scss';
+.wrapper {
+    height: 100vh;
+    padding: 0 10px;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+.container {
+    max-width: $container-width;
+    margin: auto;
+    section {
+        scroll-snap-align: start;
+        min-height: 100vh;
+    }
+    .projects,
+    .welcome {
+        border-bottom: 1px solid gray;
+    }
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: 30px repeat(3, auto);
+    grid-template-columns: 1fr;
+    gap: $gap-clamp;
+    padding: $gap-clamp 0;
+}
+
+.section-title {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    align-items: center;
+    .maxenn {
+        color: $maxenn-color;
+    }
+}
+
+.contact-me {
+    padding: $gap-clamp 0;
+    padding-bottom: 0;
+}

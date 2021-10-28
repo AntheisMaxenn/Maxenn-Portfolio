@@ -1,0 +1,73 @@
+<div class="wrapper">
+
+    <div class="row1">
+
+        <div class="title">
+            <pre><p>Contact </p> </pre>
+            <p class="maxenn">me.</p>
+        </div>
+
+        <div class="thanks animate" style="--delay-order: 1">
+            <p>
+                Thanks for checking out my portfolion site. ✌️
+            </p>
+        </div>
+
+        <div class="direct-contact animate" style="--delay-order: 2">
+            Have any questons, want to collaborate, or have a chat? Feel free to reach out and send me a message!
+        </div>
+        <div class="email-contact animate" style="--delay-order: 3">
+            <p>Contact me: </p>
+            <p class="maxenn">Antheismaxenn@gmail.com</p>
+        </div>
+
+
+        <div class="contact-container animate" style="--delay-order: 4">
+
+            <div class="form-container">
+
+                <form *ngIf="!success" [formGroup]="myForm">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" type="text">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" type="email">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput formControlName="message" type="text"></textarea>
+                    </mat-form-field>
+
+                    <button class="example-full-width sendBtn" (click)="submitForm()" mat-raised-button color="primary">
+                        SEND
+                        <img src="../../assets/send-white-18dp.svg" alt="" style="margin-left: 7px; padding-bottom: 8px; transform: rotate(-45deg)">
+                    </button>
+
+                </form>
+
+                <div class="form-error" *ngIf="error">
+                    <p>There was an error: {{errorMessage | json}}</p>
+                </div>
+
+                <div class="form-submitted" [hidden]="!success">
+                    <h1>Thanks for reaching out!</h1>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row2">
+        <div class="footer">
+            All rights reserved | © Antheis Maxenn.
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,27 @@
+$container-width: 1260px;
+$maxenn-color: #6414ad;
+$nav-height: 60px;
+$btn-width: 140px;
+$btn-height: 40px;
+// $main-heading: clamp(25px, 4rem, 80px);
+$main-heading: clamp(40px, 2.5vw, 4rem);
+$sub-heading: clamp(15px, 1.5vh, 60px);
+$sub-color: rgb(128, 128, 128);
+$sub-lineheight: clamp(15px, 5vh, 60px);
+$gap-clamp: clamp(20px, 5vh, 60px);
+// Global fadeInFromLeft animation.
+.animateMe {
+    opacity: 0;
+    animation: anim1 0.75s forwards ease-out;
+    animation-delay: calc(var(--delay-order) * 50ms);
+}
+
+@keyframes anim1 {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
